@@ -2,34 +2,100 @@ body {
       background-color: #efe3c8;
   }
 
-header {
-      background-color: #cd0000;  
+  header {
+      background-color: #cd0000;
       height: 120px;
+  
+      /* NOVO: menu acompanha a rolagem */
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+  
+      /* NOVO: sombra e borda escura embaixo */
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+      border-bottom: 4px solid #1a1a1a;
   }
   
   .menu {
       display: flex;
-      justify-content: space-between;
+      justify-content: center; /* MUDOU: era space-between */
       align-items: center;
       height: 100%;
       padding: 0 40px;
-      
+      gap: 50px;
   }
   
   .img {
-      height: 90px;        
-      width: auto;         
+      height: 90px;
+      width: auto;
       object-fit: contain;
+      /* REMOVA a linha margin-right: auto */
   }
   
   .menu a {
+      position: relative; /* NOVO */
       color: #fff;
       text-decoration: none;
       font-weight: bold;
+  
+      /* NOVO */
+      font-family: 'Rye', serif;
+      font-weight: normal;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 6px 0;
+      transition: color 0.3s ease;
   }
   
-  .menu a:hover{
-                color: gold;
+  .menu a:hover {
+      color: gold;
+  }
+  
+  /* NOVO: linha dourada que cresce embaixo do link */
+  .menu a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 3px;
+      background-color: gold;
+      transition: width 0.3s ease;
+  }
+  
+  .menu a:hover::after {
+      width: 100%;
+  }
+  
+  /* NOVO: evita que o menu fixo cubra o título da seção */
+  section {
+      scroll-margin-top: 120px;
+  }
+  
+  /* NOVO: celular */
+  @media (max-width: 700px) {
+      header {
+          height: 90px;
+      }
+  
+      .menu {
+          padding: 0 15px;
+          gap: 15px;
+      }
+  
+      .img {
+          height: 60px;
+      }
+  
+      .menu a {
+          font-size: 0.75rem;
+          letter-spacing: 0;
+      }
+  
+      section {
+          scroll-margin-top: 90px;
+      }
   }
 
   /* Rolagem suave ao clicar nos links do menu */
