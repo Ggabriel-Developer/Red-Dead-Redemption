@@ -86,12 +86,12 @@
             
                     <details>
                         <summary>Os grandes momentos da trama</summary>
-                        <ul>
+                        <ol>
                             <li><strong>O assalto em Saint Denis:</strong> um plano para conseguir dinheiro de verdade termina em tragédia, com <strong>mortes importantes</strong> e a gangue se desfazendo.</li>
                             <li><strong>Guarma:</strong> depois de um naufrágio, o grupo vai parar numa ilha em plena revolução, longe de tudo o que conhece.</li>
                             <li><strong>A dúvida de Arthur:</strong> ele percebe que Dutch não é mais o homem que o acolheu quando era menino e que <strong>Micah</strong> é o verdadeiro problema.</li>
                             <li><strong>A missão final:</strong> Arthur luta para que <strong>John Marston</strong>, <strong>Abigail</strong> e o pequeno <strong>Jack</strong> tenham uma segunda chance.</li>
-                        </ul>
+                        </ol>
                     </details>
             
                     <details>
@@ -244,6 +244,104 @@
                 <a href="#" class="con-topo">Voltar ao topo ↑</a>
             </section>
         </section>
+
+        <section class="newsletter" id="inscricao">
+            <h2 class="news-titulo">Receba notícias sobre o jogo</h2>
+            <p class="news-sub">Cadastre-se e fique por dentro das novidades da franquia.</p>
+        
+            <form action="" method="post" class="news-form">
+        
+                <div class="campo">
+                    <label for="nome">Nome e sobrenome</label>
+                    <input type="text" id="nome" name="nome" class="inputs-padrao" placeholder="Arthur Morgan" required>
+                </div>
+        
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" class="inputs-padrao" placeholder="seuemail@dominio.com" required>
+                </div>
+        
+                <fieldset>
+                    <legend>Qual jogo você prefere?</legend>
+        
+                    <label for="jogo-1" class="opcao">
+                        <input type="radio" name="jogo" id="jogo-1" value="rdr1" required> Red Dead Redemption
+                    </label>
+        
+                    <label for="jogo-2" class="opcao">
+                        <input type="radio" name="jogo" id="jogo-2" value="rdr2"> Red Dead Redemption 2
+                    </label>
+        
+                    <label for="jogo-ambos" class="opcao">
+                        <input type="radio" name="jogo" id="jogo-ambos" value="ambos"> Os dois
+                    </label>
+                </fieldset>
+        
+                <fieldset>
+                    <legend>O que você quer receber?</legend>
+        
+                    <label for="int-noticias" class="opcao">
+                        <input type="checkbox" name="interesses" id="int-noticias" value="noticias"> Notícias e lançamentos
+                    </label>
+        
+                    <label for="int-curiosidades" class="opcao">
+                        <input type="checkbox" name="interesses" id="int-curiosidades" value="curiosidades"> Curiosidades da história
+                    </label>
+        
+                    <label for="int-dicas" class="opcao">
+                        <input type="checkbox" name="interesses" id="int-dicas" value="dicas"> Dicas de gameplay
+                    </label>
+                </fieldset>
+        
+                <div class="campo">
+                    <label for="conheceu">Como conheceu a franquia?</label>
+                    <select name="conheceu" id="conheceu" class="inputs-padrao">
+                        <option value="">Selecione...</option>
+                        <option value="amigos">Por amigos</option>
+                        <option value="youtube">YouTube</option>
+                        <option value="redes">Redes sociais</option>
+                        <option value="jogando">Já jogo há tempos</option>
+                    </select>
+                </div>
+        
+                <div class="campo">
+                    <label for="mensagem">Comentário <span class="opcional">(opcional)</span></label>
+                    <textarea name="mensagem" id="mensagem" rows="4" class="inputs-padrao" placeholder="Qual foi o seu momento favorito da história?"></textarea>
+                </div>
+        
+                <input type="submit" value="Inscrever-se" class="enviar">
+            </form>
+        </section>
     </main>
+
+    <footer class="rodape">
+        <div class="rodape-conteudo">
+            <p class="rodape-titulo">Red Dead Redemption</p>
+    
+            <p class="rodape-texto">
+                Esta foi a apresentação sobre <strong>Red Dead Redemption</strong>, onde vimos
+                muito mais do que um jogo qualquer: uma lição de como
+                <strong>nossas ações têm consequências maiores do que esperamos</strong>.
+            </p>
+    
+            <p class="rodape-texto">
+                Caso queira saber mais sobre a franquia e sua história, acesse o link abaixo.
+            </p>
+    
+            <a href="https://en.wikipedia.org/wiki/Red_Dead" target="_blank" rel="noopener" class="rodape-link">
+                Saiba mais sobre a franquia ↗
+            </a>
+        </div>
+    
+        <p class="rodape-copy">Trabalho IOS · Red Dead Redemption · 2026</p>
+
+        <figure class="rodape-banner">
+            <img src="imgs/images4.jpg" alt="John Marston">
+            <figcaption>
+                <span>John Marston</span>
+                O homem que tentou escapar do passado.
+            </figcaption>
+        </figure>
+    </footer>
 </body>
 </html>
